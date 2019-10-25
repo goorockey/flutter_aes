@@ -35,7 +35,7 @@ public class FlutterAesPlugin implements MethodCallHandler {
           String plainText = call.argument("plainText");
           return FlutterAesHandler.encrypt(key, plainText);
       } catch (Exception e) {
-          return "errorEncrypt";
+          return "";
       }
   }
 
@@ -46,7 +46,7 @@ public class FlutterAesPlugin implements MethodCallHandler {
           return FlutterAesHandler.decrypt(key, encryptedText);
       } catch (Exception e) {
           e.printStackTrace();
-          return "errorDecrypt";
+          return "";
       }
   }
 }
